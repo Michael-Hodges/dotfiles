@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.config/nvim: nvim
+    ~/.config/kitty: kitty
+    ~/.config/yabai: yabai
+    ~/.config/skhd: skhd
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - ["nvim +PlugUpdate +PlugClean! +qa", Installing and updating plugins]
