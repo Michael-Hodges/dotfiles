@@ -1,2 +1,30 @@
+# https://github.com/koekeishiya/skhd
+# Should hotload... if not: skhd --reload
+
+# meh (shift + alt + ctrl)
+# hyper (cmd + shift + alt + ctrl)
 # open terminal
 cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+
+# focus windows
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# swap managed window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# move managed window
+shift + cmd - h : yabai -m window --warp west
+shift + cmd - j : yabai -m window --warp south
+shift + cmd - k : yabai -m window --warp north
+shift + cmd - l : yabai -m window --warp east
+
+# toggle whether the focused window should be tiled (only on bsp spaces)
+alt - f : yabai -m window --toggle float
+# toggle vertical/horizontal split
+alt - v : yabai -m window --toggle split
