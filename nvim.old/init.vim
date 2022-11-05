@@ -20,7 +20,7 @@ set undofile
 set noshowmode
 set cursorline
 set signcolumn=yes
-set colorcolumn=100
+set colorcolumn=79
 set cmdheight=1
 set updatetime=50
 set shortmess+=c
@@ -62,6 +62,7 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>pv :Vex <bar> :vertical resize 30<CR>
+nmap <leader>o :only<CR>
 
 " Bring search results to midscreen
 nnoremap n nzz
@@ -74,8 +75,8 @@ nnoremap <leader>co :copen<CR>
 
 nnoremap <leader>d :call SmoothScroll(0)<CR>
 nnoremap <leader>u :call SmoothScroll(1)<CR>
-nnoremap <C-U> :Call SmoothScroll(1)<CR>
-nnoremap <C-D> :Call SmoothScroll(0)<CR>
+nnoremap <C-U> :call SmoothScroll(1)<CR>
+nnoremap <C-D> :call SmoothScroll(0)<CR>
 
 "-------------------------------------------------------------------------------
 " Functions
@@ -98,4 +99,5 @@ function SmoothScroll(up)
     endwhile
 endfunction
 
-autocmd FileType python map <buffer> <leader>r :w<CR>:exec '!python' shellescape(@%, 1)<CR>
+"autocmd FileType python map <buffer> <leader>r :w<CR>:exec '!python' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <leader>r :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
