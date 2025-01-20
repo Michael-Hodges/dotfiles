@@ -28,3 +28,9 @@ shift + cmd - l : yabai -m window --warp east
 alt - f : yabai -m window --toggle float
 # toggle vertical/horizontal split
 alt - v : yabai -m window --toggle split
+
+alt - 0 : yabai -m space --focus recent
+#
+#alt - [ : yabai -m space --focus prev || yabai -m space --focus last
+## Focus next space by mission-control index if one exists, otherwise focus the first space
+#alt - ] : yabai -m space --focus next || yabai -m space --focus first
